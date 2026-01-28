@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01-hello-word/01-hello-word.iml" filepath="$PROJECT_DIR$/01-hello-word/01-hello-word.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-input-and-output/02-input-and-output.iml" filepath="$PROJECT_DIR$/02-input-and-output/02-input-and-output.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-mathematical-functions/03-mathematical-functions.iml" filepath="$PROJECT_DIR$/03-mathematical-functions/03-mathematical-functions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java-handson.iml" filepath="$PROJECT_DIR$/.idea/java-handson.iml" />
+    </modules>
+  </component>
+</project>
