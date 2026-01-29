@@ -17,30 +17,16 @@ public class Program {
         Scanner sc = new Scanner(System.in);
         Locale.setDefault(Locale.US);
 
-        Triangle xTriangle, yTriangle;
-        xTriangle = new Triangle();
-        yTriangle = new Triangle();
+        Triangle xTriangle = new Triangle();
+        Triangle yTriangle = new Triangle();
 
-        System.out.println("Enter the measures of triangle X: ");
-        xTriangle.a = sc.nextDouble();
-        xTriangle.b = sc.nextDouble();
-        xTriangle.c = sc.nextDouble();
+        xTriangle.setSidesByUserInput(sc);
+        yTriangle.setSidesByUserInput(sc);
 
-        System.out.println("Enter the measures of triangle Y: ");
-        yTriangle.a = sc.nextDouble();
-        yTriangle.b = sc.nextDouble();
-        yTriangle.c = sc.nextDouble();
+        xTriangle.printArea("X");
+        yTriangle.printArea("Y");
 
-        double pX = (xTriangle.a + xTriangle.b + xTriangle.c) / 2;
-        double pY = (yTriangle.a + yTriangle.b + yTriangle.c) / 2;
-
-        double areaX = Math.sqrt(pX * (pX - xTriangle.a) * (pX - xTriangle.b) * (pX - xTriangle.c));
-        double areaY = Math.sqrt(pY * (pY - yTriangle.a) * (pY - yTriangle.b) * (pY - yTriangle.c));
-
-        System.out.printf("Triangle X area: %.4f\n", areaX);
-        System.out.printf("Triangle Y area: %.4f\n", areaY);
-
-        if (areaX > areaY) {
+        if (xTriangle.area() > yTriangle.area()) {
             System.out.println("Larger area is X");
         } else {
             System.out.println("Larger area is Y");
