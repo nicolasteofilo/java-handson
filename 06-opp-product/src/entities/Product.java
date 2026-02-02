@@ -7,11 +7,20 @@ public class Product {
     public double price;
     public int quantity;
 
+    public Product() {} // default constructor
+
     // constructor -> execute on instance of objects
     public Product(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+    }
+
+    // overloading with only name and price
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
+        this.quantity = 0; // optional, because java initialize with 0
     }
 
     public double totalValueInStock() {
