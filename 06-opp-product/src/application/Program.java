@@ -9,21 +9,20 @@ public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+        Product product = getNewProductFromCommandLine(sc);
+        menu(sc, product);
+    }
 
-        Product product = new Product();
+    public static Product getNewProductFromCommandLine(Scanner sc) {
         System.out.println("Please enter the product data: ");
+
         System.out.print("Name: ");
         String name = sc.nextLine();
         System.out.print("Price: ");
         double price = sc.nextDouble();
         System.out.print("Initial stock: ");
         int initialStock = sc.nextInt();
-
-        product.name = name;
-        product.quantity = initialStock;
-        product.price = price;
-
-        menu(sc, product);
+        return new Product(name, price, initialStock);
     }
 
     public static void menu(Scanner sc, Product product) {

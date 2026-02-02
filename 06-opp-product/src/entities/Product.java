@@ -3,10 +3,16 @@ package entities;
 import java.lang.String;
 
 public class Product {
-    public int id;
     public String name;
     public double price;
     public int quantity;
+
+    // constructor -> execute on instance of objects
+    public Product(String name, double price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
 
     public double totalValueInStock() {
         return price * quantity;
